@@ -30,7 +30,7 @@ const themes = [
   },
 ];
 
-function triggerDownload(imgURI, filename = "ocbg.png") {
+function triggerDownload(imgURI, filename = "openclassrooms-background.png") {
   var evt = new MouseEvent("click", {
     view: window,
     bubbles: false,
