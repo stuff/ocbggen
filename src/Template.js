@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef } from 'react';
 
 const conf = [
   {
@@ -20,18 +20,17 @@ const conf = [
 
 const Template = forwardRef(({ logoText, theme, ...props }, ref) => {
   const logoTextArray = logoText
-    .split("\n")
+    .split('\n')
     .map((str) => str.trim())
     .filter((str) => str.length > 0);
 
-  const logoTextConf = conf[logoTextArray.length - 1];
+  const logoTextConf = conf[logoTextArray.length - 1] || {};
 
   return (
     <svg {...props} viewBox="0 0 1478 826" ref={ref}>
       <defs>
         <style type="text/css">
-          @import
-          url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700');
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700');
         </style>
       </defs>
 
@@ -57,8 +56,7 @@ const Template = forwardRef(({ logoText, theme, ...props }, ref) => {
           fontSize={`${logoTextConf.fontSize}`}
           y={logoTextConf.y}
           fontFamily="Montserrat"
-          fontWeight="600"
-        >
+          fontWeight="600">
           {logoTextArray.map((str, n) => (
             <tspan key={str} x="180" dy={n === 0 ? 0 : logoTextConf.dy}>
               {str}
