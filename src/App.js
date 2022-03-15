@@ -28,6 +28,10 @@ const themes = [
     backgroundColor: '#F6EF59',
     color: '#003668',
   },
+  {
+    backgroundColor: '#F45B55',
+    color: '#FFFFFF',
+  },
 ];
 
 function triggerDownload(imgURI, filename = 'openclassrooms-background.png') {
