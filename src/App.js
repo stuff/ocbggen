@@ -142,6 +142,9 @@ const App = () => {
             <Form.Group>
               <Button type="submit">Get image</Button>
             </Form.Group>
+            <div>
+              <strong>Note:</strong><br />you'll probably see that the background is flipped in your video conference tool. It's not an issue, just the preview in your tool, the others will see the background correctly!
+            </div>
           </form>
         </div>
       </div>
